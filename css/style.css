@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none;
+}
+h1,small{
+    font-family: 'Catamaran', sans-serif;
+}
+h2,h3{
+    font-family: 'Ubuntu', sans-serif;
+}
+p,a{
+    font-family: 'Quicksand', sans-serif;
+}
+ul.menu {
+    display: flex;
+    flex-flow: row;
+}
+li {
+    margin: auto;
+}
