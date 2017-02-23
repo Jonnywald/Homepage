@@ -1,83 +1,141 @@
+/*Body é o corpo do site*/
 body {
-    background-color: #EDF0FF;
+    background-color: #4f4f65;
 }
+/*essa ul se aplica a todas as listas e remove o ponto na frente de cada item*/
 ul {
     list-style-type: none;
 }
+/*escolhendo a fonte do texto principal*/
 h1,small{
     font-family: 'Catamaran', sans-serif;
 }
+/*escolhendo a fonte do texto secundario*/
 h2,h3{
     font-family: 'Ubuntu', sans-serif;
 }
+/*escolhendo a fonte do texto em geral*/
 p,a{
     font-family: 'Quicksand', sans-serif;
 }
+/*Remove o sublinhado de links*/
 a{
     text-decoration: none;
+    color: #FFFFFF;
 }
-
+/*Barra de Navegação principal*/
 ul.menu {
-    list-style-type: none;
+    /*Fazendo a barra ser horizontal*/
     display: flex;
     flex-flow: row;
-    background-color: #3d70b6;
+    /*Escolhendo a cor de fundo da barra*/
+    background-color: #cd750c;
+    /*Ajustando o tamanho*/
     padding: 12px;
+    /*Mantendo a barra fixa ao topo*/
     position: fixed;
     top: 0;
-    width: 100%;
     margin: 0;
+    z-index: 9999;
+    border-bottom: none;
+    /*Fazendo a barra ocupar a lateral inteira do site*/
+    width: 100%;
 }
+/*Organizando os itens da barra de navegação mantendo-os a esquerda com um pequeno espaço entre eles*/
 ul.menu li{
     float: left;
     margin: 0px 5px;
 }
+ul.menu li.textomenu{
+    display: flex;
+    align-items: center;
+}
+/*Definindo o texto "MENU" com a cor branca*/
 ul.menu p{
     margin: 0;
     color: #FFFFFF;
 }
+/*Botões da barra de navegação*/
 ul.menu a{
-    background-color: #4a6bef;
+    /*Definindo a cor normal do botão como azul*/
+    background-color: #b5680a;
+    /*Definindo o tamanho do botão*/
     padding: 5px 10px;
-    text-decoration: none;
     border: 5px;
+    /*Arredondando o botão*/
     border-radius: 10px;
+    /*Centralizando*/
     display: inline-block;
+    /*Definindo a taxa de transição para 300ms*/
     transition: all 0.3s;
 }
+/*Colorindo o texto de branco*/
 ul.menu a:visited{
     color: #FFFFFF;
 }
+/*Colorindo o texto de branco*/
 ul.menu a:link{
     color: #FFFFFF;
 }
+/*Colorindo o texto de branco*/
 ul.menu a:hover{
     color: #FFFFFF;
-    background-color: #6b84e5;
+    /*Trocando a cor quando o mouse passa por cima*/
+    background-color: #727283;
 }
+/*Colorindo o texto de branco*/
 ul.menu a:active{
     color: #FFFFFF;
-    background-color: #6b84e5;
+    /*Trocando a cor quando o mouse passa por cima*/
+    background-color: #727283;
 }
-
+/*Minha foto*/
 img.foto{
+    /*Arredondando as bordas da minha foto*/
     border: 1px;
     border-radius: 20%;
+    /*Ajustando o tamanho da minha foto*/
+    height: 150px;
+    width: auto;
 }
+/*Topo do site*/
 div.topo{
     margin: 10px;
+    /*distancia da barra de navegação*/
+    margin-top: 60px;
+    /*Organizando a foto e o texto na horizontal*/
     display: flex;
     flex-flow: row;
     position: relative;
 }
+/*Distanciando a o texto do topo*/
 div.topo h1{
     margin: 5px;
 }
 div.site{
     
 }
+/*Informações de contato*/
 footer{
-    background-color: #bac6ff;
+    background-color: #cd750c;
     margin: 0;
     position: relative;
+    padding: 2px;
+}
+
+div.conteudo{
+    margin: 10px;
+    border: 5px;
+    border-radius: 20px;
+    background-color: #727283;
+    padding: 2px;
+}
+div.conteudo h2, div.conteudo h3, div.conteudo p{
+    margin: 10px;
+    text-align: center;
+    text-justify: inter-word;
+}
+div.conteudo li{
+    margin: 10px 0px;
+    text-align: center;
 }
