@@ -27,7 +27,7 @@ a{
 ul.menu {
     /*Fazendo a barra ser horizontal*/
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     /*Escolhendo a cor de fundo da barra*/
     background-color: #cd750c;
     /*Ajustando o tamanho*/
@@ -68,6 +68,9 @@ ul.menu a{
     display: inline-block;
     /*Definindo a taxa de transição para 300ms*/
     transition: all 0.3s;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
 }
 /*Colorindo o texto de branco*/
 ul.menu a:visited{
@@ -96,21 +99,26 @@ img.foto{
     border-radius: 20%;
     /*Ajustando o tamanho da minha foto*/
     height: 150px;
-    width: auto;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*Topo do site*/
 div.topo{
     margin: 10px;
     /*distancia da barra de navegação*/
-    margin-top: 60px;
+    margin-top: 240px;
     /*Organizando a foto e o texto na horizontal*/
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    text-align: center;
     position: relative;
 }
 /*Distanciando a o texto do topo*/
 div.topo h1{
     margin: 5px;
+    text-align: center;
 }
 div.site{
     
@@ -138,4 +146,39 @@ div.conteudo h2, div.conteudo h3, div.conteudo p{
 div.conteudo li{
     margin: 10px 0px;
     text-align: center;
+}
+@media only screen and (min-width: 900px){
+    div.conteudo h2, div.conteudo h3, div.conteudo p{
+        text-align: left;
+    }
+    div.conteudo li{
+        text-align: left;
+    }
+    img.foto{
+    /*Arredondando as bordas da minha foto*/
+    border: 1px;
+    border-radius: 20%;
+    /*Ajustando o tamanho da minha foto*/
+    height: 150px;
+    width: 150px;
+    margin: 0;
+}
+    div.topo{
+        margin-top: 60px;
+        flex-flow: row;
+        text-align: left;
+    }
+    div.topo h1{
+        display: flex;
+        flex-flow: column;
+        text-align: left;
+    }
+    ul.menu{
+        flex-flow: row;
+    }
+    ul.menu a{
+        margin: 0;
+        width: auto;
+        text-align: left;
+    }
 }
